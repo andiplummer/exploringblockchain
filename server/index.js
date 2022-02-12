@@ -27,9 +27,7 @@ const port = process.env.PORT || 3000
 async function startServer() {
   await db.sync()
   app.listen(port, function () {
-    console.log("Knock, knock")
-    console.log("Who's there?")
-    console.log(`Your server, listening on port ${port}`)
+    console.log(`Listening on port ${port} at http://localhost:${port}/`)
   })
 }
 

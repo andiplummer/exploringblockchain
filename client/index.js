@@ -1,12 +1,17 @@
 import React from 'react'
-import {render} from 'react-dom'
+import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
+import {Router} from 'react-router-dom'
 import store from './store'
+import history from './history'
+import App from './App'
 import '../public/style.css'
 
-render(
+ReactDOM.render(
   <Provider store={store}>
-    <h1>hello world!!!!</h1>
+   <Router history={history}>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('app')
 )
